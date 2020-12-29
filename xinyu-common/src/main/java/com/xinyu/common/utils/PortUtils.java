@@ -1,4 +1,4 @@
-package utils;
+package com.xinyu.common.utils;
 
 import java.io.IOException;
 import java.net.*;
