@@ -3,13 +3,29 @@ package com.xinyu.common.api;
 /**
  * 常用API操作码
  */
-public class CommonResultCode {
+public enum CommonResultCode implements IErrorCode {
+    SUCCESS(200, "操作成功"),
+    FAILED(500, "操作失败"),
+    VALIDATE_FAILED(404, "参数检验失败"),
+    UNAUTHORIZED(401, "未登录或token已经过期"),
+    FORBIDDEN(403, "没有相关权限");
+    private long code;
+    private String message;
 
-    public static final Integer OK=2000; //成功
-    public static final Integer ERROR=2001; //失败
-    public static final Integer LOGIN_ERROR=2002; //用户名或密码错误
-    public static final Integer ACCESS_ERROR=2003; //权限不足
 
 
+
+    private CommonResultCode(long code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+
+    public long getCode() {
+        return code;
+    }
+    public String getMessage() {
+        return message;
+    }
 
 }
