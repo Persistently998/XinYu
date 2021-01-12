@@ -2,23 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.Xinyu</groupId>
+    <artifactId>xinyu</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>xinyu</name>
     <packaging>pom</packaging>
+    <description>渗透测试平台父工程</description>
+
     <modules>
         <module>xinyu-common</module>
         <module>xinyu-security</module>
         <module>xinyu-web</module>
     </modules>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.Xinyu</groupId>
-    <artifactId>xinyu</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>xinyu</name>
-    <description>渗透测试平台父工程</description>
+
+
     <properties>
         <java.version>1.8</java.version>
         <fastjson.version>1.2.51</fastjson.version>
@@ -30,11 +34,29 @@
         <log4j.version>1.2.17</log4j.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <pagehelper.version>5.2.0</pagehelper.version>
+        <mybatis.version>3.5.5</mybatis.version>
         <jedis.version>2.10.2</jedis.version>
+        <jjwt.version>0.9.0</jjwt.version>
     </properties>
 
 
     <dependencies>
+        <!--XY模块-->
+        <dependency>
+            <groupId>com.Xinyu</groupId>
+            <artifactId>xinyu-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xinyu</groupId>
+            <artifactId>xinyu-web</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xinyu</groupId>
+            <artifactId>xinyu-security</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--SpringBoot通用依赖模块-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,6 +66,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <!--日志-->
         <dependency>
@@ -63,6 +89,7 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
+        <!--Mysql数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -80,10 +107,17 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>${page.version}</version>
         </dependency>
+        <!--Mybatis分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
             <version>${pagehelper.version}</version>
+        </dependency>
+        <!--Mybatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>c
+            <version>${mybatis.version}</version>
         </dependency>
         <!-- reids -->
         <dependency>
@@ -103,6 +137,17 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
+        </dependency>
+        <!--JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>30.1-jre</version>
         </dependency>
     </dependencies>
 
