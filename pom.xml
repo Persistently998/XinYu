@@ -37,6 +37,7 @@
         <mybatis.version>3.5.5</mybatis.version>
         <jedis.version>2.10.2</jedis.version>
         <jjwt.version>0.9.0</jjwt.version>
+        <hutoll.version>5.5.7</hutoll.version>
     </properties>
 
 
@@ -148,6 +149,12 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>30.1-jre</version>
+        </dependency>
+        <!--Hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutoll.version}</version>
         </dependency>
     </dependencies>
 
