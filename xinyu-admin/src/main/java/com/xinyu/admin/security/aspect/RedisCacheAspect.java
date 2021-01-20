@@ -1,6 +1,6 @@
 package com.xinyu.admin.security.aspect;
 
-import com.macro.mall.tiny.security.annotation.CacheException;
+import com.xinyu.admin.security.annotation.CacheException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;

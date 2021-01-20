@@ -1,7 +1,7 @@
 package com.xinyu.admin.security.config;
 
-import com.macro.mall.security.util.JwtTokenUtil;
-import com.macro.mall.tiny.security.component.*;
+import com.xinyu.admin.security.util.JwtTokenUtil;
+import com.xinyu.admin.security.component.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
